@@ -8,7 +8,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 @Module({
   imports: [
     UsersModule,
-    MongooseModule.forRoot('mongodb://localhost:27017')
+    MongooseModule.forRoot('mongodb://localhost:27017', {dbName: 'nest-mongoose'})
   ],
   controllers: [AppController],
   providers: [AppService],
